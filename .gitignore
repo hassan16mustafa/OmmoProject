@@ -1,0 +1,23 @@
+# Virtual environment folder
+env/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Pytest cache
+.pytest_cache/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# VSCode settings (optional, if you don't want to share your VSCode workspace settings)
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
