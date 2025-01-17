@@ -17,15 +17,21 @@ def extract_position_data(hdf, group):
 
 def calculate_averages(sensor_data):
     """Calculates the average X, Y, Z positions for a sensor."""
+    if sensor_data.size == 0:  # Check if dataset is empty
+        return 0.0, 0.0, 0.0
     avg_x = np.mean(sensor_data[:, 0])
     avg_y = np.mean(sensor_data[:, 1])
     avg_z = np.mean(sensor_data[:, 2])
     return avg_x, avg_y, avg_z
 
+
 def calculate_max_distance(sensor_data):
     """Calculates the maximum Euclidean distance for a sensor."""
+    if sensor_data.size == 0:  # Check if dataset is empty
+        return 0.0
     distances = np.sqrt(np.sum(sensor_data**2, axis=1))  # Euclidean distance formula
     return np.max(distances)
+
 
 def write_csv(file_path, data, headers):
     """Writes data to a CSV file."""
