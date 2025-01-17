@@ -138,6 +138,7 @@ OmmoProject/
 ├── tests/                 # Unit tests
 │   ├── test_process.py    # Tests for process.py
 │   ├── test_utils.py      # Tests for utils.py
+    ├── test_integration.py # Tests for integration.py
 ├── requirements.txt       # List of dependencies
 ├── README.md              # Project documentation
 ├── env/                   # Virtual environment (excluded from version control)
