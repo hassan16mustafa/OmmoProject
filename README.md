@@ -150,8 +150,8 @@ docker run -v <path_to_input_folder>:/app/input_folder \
 
 **Example (Windows):**
 ```bash
-docker run -v C:/Users/MUSTA/Desktop/input_folder:/app/input_folder \
-           -v C:/Users/MUSTA/Desktop/output_folder:/app/output_folder \
+docker run -v C:/Users/MY/Desktop/input_folder:/app/input_folder \
+           -v C:/Users/MY/Desktop/output_folder:/app/output_folder \
            ommo-project
 ```
 
