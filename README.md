@@ -128,6 +128,48 @@ tests/test_utils.py ..                                                  [100%]
 
 ---
 
+
+### **Docker Usage**
+Docker provides a lightweight, isolated environment to run this project without worrying about dependencies or system configurations.
+
+#### **1. Build the Docker Image**
+Build the Docker image using the provided `Dockerfile`:
+```bash
+docker build -t ommo-project .
+```
+
+#### **2. Run the Docker Container**
+Run the container with the input and output folders mapped to your local machine.
+
+**Command:**
+```bash
+docker run -v <path_to_input_folder>:/app/input_folder \
+           -v <path_to_output_folder>:/app/output_folder \
+           ommo-project
+```
+
+**Example (Windows):**
+```bash
+docker run -v C:/Users/MUSTA/Desktop/input_folder:/app/input_folder \
+           -v C:/Users/MUSTA/Desktop/output_folder:/app/output_folder \
+           ommo-project
+```
+
+**Example (macOS/Linux):**
+```bash
+docker run -v ~/Desktop/input_folder:/app/input_folder \
+           -v ~/Desktop/output_folder:/app/output_folder \
+           ommo-project
+```
+
+#### **3. Verify Outputs**
+After the Docker container completes, check the `<path_to_output_folder>` for the following files:
+1. `average_positions.csv`
+2. `max_distances.csv`
+
+---
+
+
 ## Project Structure
 
 ```
